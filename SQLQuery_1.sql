@@ -38,3 +38,11 @@ CREATE TABLE OrderLine (
     CONSTRAINT OrderLine_FK1 foreign key (OrderID) references [Order] (OrderID),
     CONSTRAINT OrderLine_FK2 foreign key (ProductID) references Product (ProductID)
 )
+
+ALTER TABLE Customer Add CustomerType VARCHAR(20)
+ALTER TABLE Customer alter Column CustomerType varChar(30)
+
+DROP TABLE OrderLine
+DROP TABLE [Order]
+DROP TABLE Product
+DROP TABLE Customer
