@@ -1,0 +1,4 @@
+select Distinct Faculty.FacultyName From Qualified
+Join Faculty ON Qualified.FacultyID = Faculty.FacultyID
+Join Course ON Course.CourseID = Qualified.CourseID
+where Course.CourseName != 'Syst Analysis' AND Course.CourseName != 'Syst Design';
